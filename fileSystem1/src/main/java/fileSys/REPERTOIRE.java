@@ -63,7 +63,9 @@ public void Ajouter(RACINE f){
 		{System.out.println("erreur la taille ne peut pas etre négatif");}
 		
 		for (RACINE r : doc){
+			
 			taille+=r.Taille();
+			
 		System.out.println("\n la taille est :" + taille);
 		}
 		
