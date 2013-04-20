@@ -1,8 +1,11 @@
 package fileSys;
 
 /*
- * Auteur : Roseline et Amine
+ * Auteur: Roseline et Amine
+ * cette classe est une implŽmentation d'un repertoire qui intŽgre d'autre repertoire 
+ * et des fichiers
  */
+  
 import fileSysTest.repertoireException;
 
 import java.util.ArrayList;
@@ -11,11 +14,17 @@ public class REPERTOIRE extends RACINE {
 	
 	private ArrayList <RACINE> doc = new ArrayList<RACINE>();
 
+	/*
+	 * initialisation du repertoire 
+	 */
 	public REPERTOIRE(String nom) {
 		super(nom);
 		
 	}
 
+/*
+ * Ajout d'une refernce dans un repertoire 
+ */
 public void Ajouter(RACINE f){
 	if(f==null)throw new repertoireException("on ne peut pas ajouter une référence nulle dans un repertoire");
 	System.out.println("erreur,il faut saisir une référence");
@@ -30,14 +39,21 @@ public void Ajouter(RACINE f){
 	doc.add(f);
 }
 
-	
+	/*
+	 * 
+	 * @see fileSys.RACINE#ouvrir()
+	 * consultation de tout ce qui se trouve dans le repertoire
+	 */
 	@Override
 	public void ouvrir() {
 		System.out.println("\n Nom du repertoire :" + super.getNom()  +   " ; Nom de la référence : " + this.doc);
 		
 		
 	}
-
+/*
+ * 
+ * cette mŽthode permet de calculer la somme de taille de tous les fichiers qui se trouve dans un repertoire
+ */
 	@Override
 	public int Taille() {
 		int taille=1;

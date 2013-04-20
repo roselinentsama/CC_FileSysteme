@@ -18,7 +18,9 @@ public abstract class RACINE {
 	public String getNom() {
 		return nom;
 	}
-	
+	/*
+	 * les méthodes abstraites
+	 */
 	public abstract void ouvrir();
 	public abstract int Taille();
 	 

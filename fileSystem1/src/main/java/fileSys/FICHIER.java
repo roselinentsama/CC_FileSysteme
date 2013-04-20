@@ -28,9 +28,7 @@ public class FICHIER extends RACINE {
 
 	@Override
 	public int Taille() {
-		//return taille;
-		//if(taille<0)throw new repertoireException("erreur sur le calcul de la taille");
-		//{System.out.println("erreur la taille ne peut pas etre nŽgatif");}
+		
 		return taille;
 		
 	}
